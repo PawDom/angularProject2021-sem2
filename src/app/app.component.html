@@ -1,0 +1,30 @@
+
+<!-- <app-form *ngIf="appState === states.INTRO"
+  (submit)="onFormSubmit($event)"></app-form>
+
+<app-game *ngIf="appState === states.GAME"
+  [playerData]="player"
+  (close)="onGameClosed()"></app-game> -->
+
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{ title }}</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <router-outlet></router-outlet>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            Created by Paweł Domurat © 2021. Wykorzystano bibiotekę
+            <a href="https://www.npmjs.com/package/ngx-tetris">ngx-tetris</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>

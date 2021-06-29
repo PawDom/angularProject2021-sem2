@@ -1,0 +1,19 @@
+<section class="introPage">
+  <div class="container-fluid page-content">
+    <div class="row">
+      <div class="col-md-12">
+          <p>To start the game, choose your name and use your index as your password!<br>
+             What? You don't know your index? Ugh, okey its just 4 random digits, i lied...</p>
+          <form class="form" [formGroup]="myNewForm" (submit)="onSubmit(myNewForm)">
+            <input type="text" formControlName="name" placeholder="name" />
+            <input type="text" formControlName="token" placeholder="password" />
+            <p>Choose your color:</p>
+            <select formControlName="color">
+              <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+            </select>
+            <button [disabled]="!myNewForm.valid">START</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</section>

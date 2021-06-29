@@ -1,0 +1,32 @@
+<div class="container-fluid page-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-12">
+        <h2 class="h2Header">Oh, hello there {{ data?.name }} !!</h2>
+        <p>Your current points: {{ points }}</p>
+        <p>Playing time: <span>{{ h }}</span>h <span>{{ min }}</span>m <span>{{ sek }}</span>s</p>
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <div class="col-md-12">
+
+            <button (click)="game.actionStart()" (click)="gameStarted()">Start</button>
+            <button (click)="game.actionStop()" (click)="gameStoped()">Stop</button>
+            <button (click)="game.actionReset()" (click)="game.actionStop()" (click)="reset()" id="reset">Reset & add
+              points</button>
+            <button (click)="game.actionStop()" (click)="goBack()">EXIT</button>
+          </div>
+          <div class="col-md-12">
+            <app-controller [ready]="status" [game]="game"></app-controller>
+          </div>
+        </div>
+        <div class="col-md-4 column">
+          <tetris-core [class]="class" #game (lineCleared)="onLineCleared()" (gameOver)="onGameOver()"></tetris-core>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <app-list></app-list>
+      </div>
+    </div>
+  </div>
+</div>

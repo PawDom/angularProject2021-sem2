@@ -1,0 +1,50 @@
+.h2Header{
+  padding: 15px;
+  margin-top: 20px;
+}
+.col-md-6{
+  float: left;
+}
+
+span {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+
+*{
+  text-align: center;
+}
+body{
+  background-color: lavender;
+}
+header{
+  background-color: mediumturquoise;
+}
+footer{
+  margin-top: 30px;
+}
+h1{
+  text-align: center;
+  margin: 30px 15px 30px 50px;
+  color: white;
+}
+.col-md-6{
+  float:left;
+}
+.col-md-4{
+  float:left;
+}
+button{
+background-color: mediumturquoise !important;
+color: white !important;
+}
+.main{
+  margin-top:15%;
+}
+.column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
